@@ -1,2 +1,2 @@
-# starter_theme
-starter theme fro Drupal 8
+# Starter theme
+Starter theme for Drupal 8

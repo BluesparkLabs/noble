@@ -1,0 +1,107 @@
+form {
+  @include clearfix();
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+input[type=search],
+input[type=text],
+input[type=password],
+input[type=email] {
+  box-sizing: border-box;
+  background: $white;
+  border: 1px solid $grey;
+  padding: 5px 10px;
+  max-width: 100%;
+}
+
+select {
+  width: 100%;
+  box-sizing: border-box;
+  appearance: none;
+  background: transparent url('../i/caret-down.svg') right 10px center no-repeat;
+  background-size: 10px auto;
+  border: 1px solid $grey;
+  border-radius: 0;
+  padding: 5px 30px 5px 10px;
+}
+
+input[type=radio] {
+  background: $white;
+  border: 1px solid $grey;
+  padding: 5px;
+}
+
+input[type=submit] {
+  border: 0;
+  padding: 6px 10px;
+  text-transform: uppercase;
+  background: $blue-base-color;
+  color: $white;
+}
+
+.form-actions {
+  float: right;
+}
+
+label {
+  cursor: pointer;
+  color: $dark-grey;
+}
+
+input[type=checkbox] {
+  display: none;
+}
+
+input[type=checkbox] + label::before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #f1f1f1;
+  vertical-align: top;
+  margin-right: 5px;
+}
+
+input[type=checkbox]:checked + label::before {
+  background: url('../i/tick.svg') center center no-repeat;
+  background-size: 20px auto;
+}
+
+label.form-required::after {
+  content: "*";
+  color: #8a171a;
+  font-size: 75%;
+  top: -0.3em;
+  position: relative;
+  vertical-align: baseline;
+}
+
+.form-item {
+  margin-bottom: 10px;
+
+  .description {
+    font-size: 11px;
+    color: $middle-grey;
+  }
+}
+
+@include small {
+  .search-form {
+
+    .form-item-keys {
+      max-width: 70%;
+      float: left;
+
+      label {
+        display: none;
+      }
+    }
+
+    .form-submit {
+      float: right;
+    }
+  }
+}
+

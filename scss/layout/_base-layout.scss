@@ -1,0 +1,36 @@
+
+div, header, footer, nav {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box
+}
+
+.l-container {
+  clear: both;
+}
+
+.l-contained {
+  max-width: $max-page-width;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 15px;
+  clear: both;
+}
+
+.l-main-content {
+  //background: linear-gradient(to left, $white 66.67%, $light-base-color 33.33%);
+
+
+  @include small-and-narrow {
+    background: $white;
+  }
+}
+
+.bs-region--main {
+  background: $white;
+}
+
+.l-help {
+  @include clearfix();
+}
+

@@ -1,0 +1,54 @@
+body {
+  min-width: $min-page-width;
+  font: $base-font-weight $base-font-size $base-font-family;
+  color: $base-font-color;
+}
+
+a {
+  color: $blue-base-color;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+figure {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+figcaption {
+  font-size: 14px;
+  color: $base-font-color;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1 {
+  font-size: 36px;
+  color: $blue-base-color;
+  font-weight: $semibold-font-weight;
+}
+
+h2 {
+  font-size: 25px;
+  line-height: 36px;
+  margin: 20px 0 15px;
+
+
+  .block > & {
+    color: $blue-base-color;
+    margin-top: 0;
+    padding-top: 20px;
+  }
+}
+
+p {
+  margin: 10px 0 20px;
+  line-height: 26px;
+}

@@ -1,0 +1,14 @@
+.messages {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background: $ok-bg;
+  padding: 10px;
+}
+
+.messages--warning {
+  background: $warning-bg;
+}
+
+.messages--error {
+  background: $error-bg;
+}

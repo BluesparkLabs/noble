@@ -1,0 +1,19 @@
+core: 8.x
+type: theme
+base theme: stable
+
+name: 'Starter Theme'
+description: 'Starter theme based on Stable.'
+package: 'Themes'
+
+libraries:
+  - 'starter_theme/custom'
+
+regions:
+  page_top: 'Page top'
+  header: 'Header'
+  highlighted: 'Highlighted'
+  help: 'Help'
+  content: 'Content'
+  footer: 'Footer'
+  page_bottom: 'Page bottom'

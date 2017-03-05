@@ -1,0 +1,68 @@
+.l-header {
+  background: linear-gradient(to bottom, $blue-base-color 0%, $blue-base-color 34px, $white 34px, $white 100%);
+}
+
+.block__branding {
+  float: left;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  img {
+    width: 120px;
+  }
+
+  a {
+    color: $black;
+    font-weight: $base-font-weight;
+    vertical-align: top;
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    &:nth-last-child(1) {
+      border-left: 2px solid $blue-base-color;
+      padding-left: 10px;
+      margin-left: 10px;
+      font-size: 40px;
+    }
+  }
+}
+
+.block__search {
+  float: right;
+  margin-top: 20px;
+
+  .form-item,
+  .form-actions {
+    float: left;
+  }
+
+  input[type=search] {
+    border: 1px solid $light-grey;
+    margin: 0;
+    -webkit-appearance: none;
+    border-radius: 0;
+    height: 48px;
+    padding: 0 20px;
+    font-size: 13px;
+    font-style: italic;
+    width: 240px;
+  }
+
+  input[type=submit] {
+    width: 48px;
+    height: 48px;
+    text-indent: 9999px;
+    background: $white url('../i/search-icon.svg') 12px 11px no-repeat;
+    background-size: 20px;
+    border: 1px solid $light-grey;
+    border-left: 0;
+    margin-left: -1px;
+    cursor: pointer;
+  }
+
+  button.trigger {
+    right: -10px;
+  }
+}

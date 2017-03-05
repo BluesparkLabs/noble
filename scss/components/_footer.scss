@@ -1,0 +1,20 @@
+.l-footer {
+  background: $blue-base-color;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-top: 70px;
+
+  * {
+    color: $lightblue-color;
+  }
+
+  a:hover {
+    color: $lighterblue-color;
+  }
+
+  h1, h2, h3 {
+    color: $white;
+  }
+
+}
+

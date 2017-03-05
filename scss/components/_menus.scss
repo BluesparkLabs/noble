@@ -1,0 +1,68 @@
+.menu__top {
+  @include clearfix();
+
+  nav {
+    > ul {
+      @include menu-inline();
+
+      float: right;
+
+      li {
+        margin: 8px 0 8px 10px;
+      }
+
+      a {
+        color: $white;
+        text-transform: uppercase;
+        font-size: 12px;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+.menu__main {
+
+  clear: both;
+  background: #F6F6F6;
+  position: relative;
+  box-shadow: 0 2px 10px -3px rgba(0, 0, 0, 0.5);
+
+  nav {
+    &:hover {
+      a {
+        color: #aaa;
+        fill: #bbb;
+      }
+    }
+
+    > ul {
+      @include menu-inline();
+    }
+
+    a {
+      line-height: 50px;
+      color: #444;
+      font-size: 18px;
+      font-weight: $base-font-size;
+      transition: .2s;
+      fill: #777;
+      padding: 15px 0;
+
+      &:hover {
+        color: #015294;
+        fill: #015294;
+        text-decoration: none;
+      }
+    }
+  }
+
+  button.trigger {
+    top: -20px;
+  }
+}
+

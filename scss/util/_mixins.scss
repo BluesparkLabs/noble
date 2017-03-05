@@ -1,0 +1,83 @@
+
+@mixin small {
+  @media (max-width: #{$narrow-width}) {
+    @content;
+  }
+}
+
+@mixin narrow {
+  @media (min-width: #{$narrow-width + 1px}) and (max-width: #{$wide-width}) {
+    @content;
+  }
+}
+
+@mixin small-and-narrow {
+  @media (max-width: #{$wide-width}) {
+    @content;
+  }
+}
+
+@mixin wide {
+  @media (min-width: #{$wide-width + 1px}) {
+    @content;
+  }
+}
+
+@mixin clearfix() {
+  &::after {
+    content: '';
+    display: table;
+    width: 100%;
+  }
+}
+
+@mixin menu-inline() {
+  @include clearfix();
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  > li {
+    ul, ol {
+      display: none;
+    }
+  }
+}
+
+@mixin form-inline() {
+  .form-item,
+  .form-actions {
+    float: left;
+  }
+}
+
+// scss-lint:disable ImportantRule
+@mixin visually-hidden() {
+  position: absolute !important;
+  clip: rect(1px, 1px, 1px, 1px);
+  overflow: hidden;
+  height: 1px;
+  width: 1px;
+  word-wrap: normal;
+  pointer-events: none;
+}
+
+@mixin hide-text() {
+  font: 0/0 a;
+  text-shadow: none;
+  color: transparent;
+}
+
+// scss-lint:disable UnnecessaryParentReference
+@mixin firefox-only {
+  @at-root {
+    @-moz-document url-prefix() {
+      & {
+        @content;
+      }
+    }
+  }
+}

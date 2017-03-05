@@ -1,0 +1,19 @@
+.breadcrumbs {
+
+  background: linear-gradient(to right, #005294, #5E7DBF);
+  color: rgba(255, 255, 255, .7);
+
+  ol {
+    @include menu-inline();
+    justify-content: flex-start;
+    padding: 10px 0;
+  }
+
+  a {
+    color: rgba(255, 255, 255, .7);
+    &:hover {
+      color: rgba(255, 255, 255, 1);
+      text-decoration: none;
+    }
+  }
+}

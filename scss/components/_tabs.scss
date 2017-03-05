@@ -1,0 +1,33 @@
+//System Tabs
+
+.block--tabs {
+  margin-bottom: 15px;
+
+  ul {
+    @include clearfix();
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-bottom: 1px solid $light-base-color;
+
+    li {
+      float: left;
+      margin-right: -1px;
+    }
+
+    a {
+      display: block;
+      margin-top: 10px;
+      padding: 5px 15px;
+      border: 1px solid $light-base-color;
+      border-bottom: 0;
+    }
+
+    a:hover,
+    a.is-active {
+      text-decoration: none;
+      padding: 10px 15px;
+      margin-top: 0;
+    }
+  }
+}
