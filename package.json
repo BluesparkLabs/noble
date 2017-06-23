@@ -1,25 +1,10 @@
 {
-  "name": "StarterTheme",
+  "name": "starter_theme",
   "version": "1.0.0",
-  "description": "Starter Drupal 8 theme",
+  "description": "Drupal 8 starter theme",
+  "dependencies": {},
   "devDependencies": {
-    "breakpoint-sass": "^2.7.0",
-    "eyeglass": "^1.0",
-    "glob": "^5.0.15",
-    "grunt": "^1.0.1",
-    "grunt-autoprefixer": "^3.0.4",
-    "grunt-contrib-jshint": "^1.0.0",
-    "grunt-contrib-watch": "^1.0.0",
-    "grunt-sass": "^1.2.0",
-    "grunt-scss-lint": "^0.3.8",
-    "grunt-svgmin": "^3.2.0",
-    "load-grunt-tasks": "^3.5.0"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Nacho Sánchez <nacho@isholgueras.com>",
-  "license": "MIT",
-  "main": "Gruntfile.js",
-  "dependencies": {}
+    "breakpoint-sass": "^2.7.1",
+    "eyeglass": "^1.2.1"
+  }
 }
