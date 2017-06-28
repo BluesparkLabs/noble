@@ -1,6 +1,7 @@
 'use strict';
 
-var argv = require('yargs').argv,
+var autoprefixer = require('gulp-autoprefixer'),
+    argv = require('yargs').argv,
     cleanCSS = require('gulp-clean-css'),
     gulp = require('gulp'),
     gulpif = require('gulp-if'),
@@ -54,6 +55,7 @@ gulp.task('sass', function () {
   return gulp.src(paths.scssEntrypoint)
     .pipe(gulpif(!production, sourceMaps.init()))
     .pipe(sass().on('error', sass.logError))
+    .pipe(autoprefixer({ cascade: false }))
     .pipe(gulpif(production, cleanCSS({compatibility: 'ie8'})))
     .pipe(gulpif(!production, sourceMaps.write()))
     .pipe(gulpif(!production, liveReload()))
