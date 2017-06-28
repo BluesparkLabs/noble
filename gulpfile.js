@@ -7,8 +7,8 @@ var autoprefixer = require('gulp-autoprefixer'),
     gulpif = require('gulp-if'),
     liveReload = require('gulp-livereload'),
     sass = require('gulp-sass'),
-    sourceMaps = require('gulp-sourcemaps'),
-    uglify = require('gulp-uglify');
+    sassLint = require('gulp-sass-lint'),
+    sourceMaps = require('gulp-sourcemaps');
 
 // Set up a boolean variable based on the `--production` flag passed to the
 // gulp command in case the tasks are supposed to prepare the codebase to be
@@ -33,7 +33,7 @@ gulp.task('default', ['build']);
 /**
  * Task: Build.
  */
-gulp.task('build', ['sass']);
+gulp.task('build', ['sass:lint', 'sass']);
 
 /**
  * Task: Watch.
@@ -45,7 +45,7 @@ gulp.task('watch', ['build'], function () {
   if (!production) {
     liveReload.listen();
   }
-  gulp.watch(paths.scss, ['sass']);
+  gulp.watch(paths.scss, ['sass:lint', 'sass']);
 });
 
 /**
@@ -60,4 +60,15 @@ gulp.task('sass', function () {
     .pipe(gulpif(!production, sourceMaps.write()))
     .pipe(gulpif(!production, liveReload()))
     .pipe(gulp.dest(paths.css));
+});
+
+/**
+ * Task: Lints Sass files.
+ */
+gulp.task('sass:lint', function () {
+  return gulp.src(paths.scss)
+    .pipe(sassLint({
+      files: {ignore: 'scss/base/_normalize.scss'}
+    }))
+    .pipe(sassLint.format())
 });
