@@ -1,75 +1,22 @@
-{#
-/**
- * @file
- * Theme override to display a single page.
- */
-#}
-{% set layout_type = page.sidebar_first is empty ? "wide-layout" : "sidebar-layout" %}
-{% set user_type = logged_in ? "authenticated" : "anonymous" %}
-{% set home_tag %}
-  {{ page.header.rti_theme_branding }}
-{% endset %}
-
-{{ page.page_top }}
-<div class="l-page {{ layout_type }} {{ user_type }}">
+<div class="l-page">
   <header class="l-header">
-    <div class="l-contained menu__top">
-      {{ page.header.topmenu }}
-    </div>
     <div class="l-contained">
-      <div class="block block__branding">
-        {% if is_front %}
-          <h1 class="block__title">
-            {{ home_tag }}
-          </h1>
-        {% else %}
-          <div class="block__title">
-            {{ home_tag }}
-          </div>
-        {% endif %}
-      </div>
-      <div class="block__search">
-        {{ page.header.searchform }}
-      </div>
+      {{ page.header }}
     </div>
   </header>
-  <div class="menu__main" role="navigation">
-    <div class="l-contained">
-      {{ page.header.rti_theme_main_menu }}
-    </div>
-  </div>
-  {% if page.header.rti_theme_breadcrumbs %}
-  <div class="breadcrumbs" role="navigation">
-    <div class="l-contained">
-      {{ page.header.rti_theme_breadcrumbs }}
-    </div>
-  </div>
-  {% endif %}
-
   <div class="l-main-content l-container">
-
     {% if page.highlighted %}
       <div class="l-contained">
         {{ page.highlighted }}
       </div>
     {% endif %}
-
     <div class="l-contained">
-      {% if page.help %}
-        <div class="l-help l-contained">
-          {{ page.help }}
-        </div>
-      {% endif %}
       {{ page.content }}
     </div>
   </div>
-
   <footer class="l-footer">
-    <div class="footer__middle">
-      <div class="l-contained">
-        {{ page.footer }}
-      </div>
+    <div class="l-contained">
+      {{ page.footer }}
     </div>
   </footer>
 </div>
-{{ page.page_bottom }}
