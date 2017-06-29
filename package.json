@@ -1,7 +1,7 @@
 {
-  "name": "starter_theme",
-  "version": "1.0.0",
-  "description": "Drupal 8 starter theme",
+  "name": "Noble",
+  "version": "0.0.1",
+  "description": "A lint-free, BEM, SCSS, Autoprefixed, and SVG-friendly foundational base theme for creating elegant Drupal 8 sites.",
   "dependencies": {
     "gulp": "^3.9.1",
     "gulp-frontend-tasks": "github:BluesparkLabs/gulp-frontend-tasks"

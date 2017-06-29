@@ -2,12 +2,12 @@ core: 8.x
 type: theme
 base theme: stable
 
-name: 'Starter Theme'
-description: 'Starter theme based on Stable.'
+name: 'Noble'
+description: 'A lint-free, BEM, SCSS, Autoprefixed, and SVG-friendly foundational base theme for creating elegant Drupal 8 sites.'
 package: 'Themes'
 
 libraries:
-  - 'starter_theme/custom'
+  - 'noble/custom'
 
 regions:
   page_top: 'Page top'
