@@ -4,8 +4,7 @@
   "description": "Drupal 8 starter theme",
   "dependencies": {
     "gulp": "^3.9.1",
-    "gulp-navy": "github:balintk/gulp-navy"
+    "gulp-frontend-tasks": "github:BluesparkLabs/gulp-frontend-tasks"
   },
-  "sasslintConfig": "./node_modules/gulp-navy/.sass-lint.yml"
+  "sasslintConfig": "./node_modules/gulp-frontend-tasks/.sass-lint.yml"
 }
-
