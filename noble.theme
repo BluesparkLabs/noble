@@ -99,7 +99,6 @@ function noble_preprocess_block(array &$variables) {
  * Implements hook_preprocess_HOOK() for Block document templates.
  */
 function noble_preprocess_region(array &$variables) {
-  drupal_set_message("message");
   $variables['attributes']['class'][] = 'l-' . Html::cleanCssIdentifier($variables['region']);
 }
 
