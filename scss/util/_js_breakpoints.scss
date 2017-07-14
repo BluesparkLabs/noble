@@ -1,0 +1,17 @@
+// @see https://www.lullabot.com/articles/importing-css-breakpoints-into-javascript.
+body::before {
+  content: 'smartphone';
+  display: none;
+}
+
+@include narrow {
+  body::before {
+    content: 'tablet';
+  }
+}
+
+@include wide {
+  body::before {
+    content: 'desktop';
+  }
+}
