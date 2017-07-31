@@ -2,6 +2,7 @@ body {
   min-width: $min-page-width;
   font: $base-font-weight $base-font-size $base-font-family;
   color: $base-font-color;
+  line-height: 26px;
 }
 
 a {
@@ -50,5 +51,4 @@ h2 {
 
 p {
   margin: 10px 0 30px;
-  line-height: 26px;
 }
