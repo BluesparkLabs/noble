@@ -5,14 +5,20 @@
   }
 }
 
+@mixin small-and-narrow {
+  @media (max-width: #{$wide-width}) {
+    @content;
+  }
+}
+
 @mixin narrow {
   @media (min-width: #{$narrow-width + 1px}) and (max-width: #{$wide-width}) {
     @content;
   }
 }
 
-@mixin small-and-narrow {
-  @media (max-width: #{$wide-width}) {
+@mixin narrow-and-higher {
+  @media (min-width: #{$narrow-width + 1px}) {
     @content;
   }
 }
