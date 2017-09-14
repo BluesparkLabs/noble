@@ -70,10 +70,10 @@ input[type=checkbox]:checked + label::before {
 }
 
 label.form-required::after {
-  content: "*";
+  content: '*';
   color: #8a171a;
   font-size: 75%;
-  top: -0.3em;
+  top: -.3em;
   position: relative;
   vertical-align: baseline;
 }
