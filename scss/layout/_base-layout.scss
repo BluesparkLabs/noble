@@ -1,5 +1,8 @@
 
-div, header, footer, nav {
+div,
+header,
+footer,
+nav {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box
@@ -18,9 +21,6 @@ div, header, footer, nav {
 }
 
 .l-main-content {
-  //background: linear-gradient(to left, $white 66.67%, $light-base-color 33.33%);
-
-
   @include small-and-narrow {
     background: $white;
   }

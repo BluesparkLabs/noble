@@ -1,7 +1,6 @@
 .breadcrumbs {
-
-  background: linear-gradient(to right, #005294, #5E7DBF);
-  color: rgba(255, 255, 255, .7);
+  background: linear-gradient(to right, #005294, #5e7dbf);
+  color: rgba($white, .7);
 
   ol {
     @include menu-inline();
@@ -10,9 +9,10 @@
   }
 
   a {
-    color: rgba(255, 255, 255, .7);
+    color: rgba($white, .7);
+
     &:hover {
-      color: rgba(255, 255, 255, 1);
+      color: rgba($white, 1);
       text-decoration: none;
     }
   }
