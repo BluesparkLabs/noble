@@ -10,7 +10,7 @@ body::before {
   }
 }
 
-@include wide {
+@include normal {
   body::before {
     content: 'desktop';
   }

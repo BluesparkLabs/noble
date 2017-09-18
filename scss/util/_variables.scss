@@ -3,7 +3,13 @@
 $min-page-width: 320px;
 $max-page-width: 1180px;
 
-// fonts
+// Ensure content doesn't sit on edge of the screen on small screens.
+$gutter-width: 4vw;
+
+// A comfortable reading line length.
+$max-line-length: 44em;
+
+// Fonts
 $base-font-family: 'Open Sans', sans-serif;
 $base-font-size: 14px;
 $base-font-weight: 400;
@@ -11,6 +17,7 @@ $light-font-weight: 300;
 $semibold-font-weight: 600;
 $bold-font-weight: $semibold-font-weight;
 
-// breakpoints widths
+// Breakpoints widths; see _mixins.scss for usage.
 $narrow-width: 560px;
-$wide-width: 850px;
+$normal-width: 850px;
+$wide-width: 1200px;

@@ -6,13 +6,13 @@
 }
 
 @mixin small-and-narrow {
-  @media (max-width: #{$wide-width}) {
+  @media (max-width: #{$normal-width}) {
     @content;
   }
 }
 
 @mixin narrow {
-  @media (min-width: #{$narrow-width + 1px}) and (max-width: #{$wide-width}) {
+  @media (min-width: #{$narrow-width + 1px}) and (max-width: #{$normal-width}) {
     @content;
   }
 }
@@ -23,10 +23,32 @@
   }
 }
 
-@mixin wide {
-  @media (min-width: #{$wide-width + 1px}) {
+@mixin normal {
+  @media (min-width: #{$normal-width + 1px}) {
     @content;
   }
+}
+
+@mixin wide($width-offset: 0) {
+  @media (min-width: #{$wide-width} + #{$width-offset}) {
+    @content;
+  }
+}
+
+// A container that expands to the specified max-width with appropriate
+// gutters for mobile. Will use the $max-page-width sitewide variable
+// by default when no specific max-width is provided.
+@mixin container($max-width: $max-page-width, $gutters: $gutter-width) {
+  max-width: $max-width;
+  padding-left: $gutters;
+  padding-right: $gutters;
+  box-sizing: content-box;
+}
+
+// A container that expands to a comfortable reading line length for the site,
+// with appropriate gutters for mobile.
+@mixin container-narrow() {
+  @include container($max-line-length);
 }
 
 @mixin clearfix() {
