@@ -1,0 +1,6 @@
+noble.nobleScreenDensity:
+  label: Screen density
+  mediaQuery: ''
+  weight: 0
+  multipliers:
+    - 2x
