@@ -1,5 +1,5 @@
-noble.nobleScreenDensity:
-  label: Screen density
+noble.default:
+  label: Default
   mediaQuery: ''
   weight: 0
   multipliers:
