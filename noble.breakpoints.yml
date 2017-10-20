@@ -2,5 +2,39 @@ noble.default:
   label: Default
   mediaQuery: ''
   weight: 0
+
+noble.screenSize.small:
+  label: small
+  mediaQuery: ''
+  weight: 0
   multipliers:
+    - 1x
     - 2x
+  group: noble.screenSize
+
+noble.screenSize.narrow:
+  label: narrow
+  mediaQuery: '(min-width: 560px)'
+  weight: 1
+  multipliers:
+    - 1x
+    - 2x
+  group: noble.screenSize
+
+noble.screenSize.normal:
+  label: normal
+  mediaQuery: '(min-width: 850px)'
+  weight: 2
+  multipliers:
+    - 1x
+    - 2x
+  group: noble.screenSize
+
+noble.screenSize.wide:
+  label: wide
+  mediaQuery: '(min-width: 1200px)'
+  weight: 3
+  multipliers:
+    - 1x
+    - 2x
+  group: noble.screenSize
